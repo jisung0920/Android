@@ -27,5 +27,33 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        b2.setOnClickListener(new View.OnClickListener() {//button 클릭 이벤트리스너
+            @Override
+            public void onClick(View v) {//클릭시 행동
+                Intent intent = new Intent(MainActivity.this,AgeActivity.class);
+                startActivity(intent);
+            }
+        });
+        b3.setOnClickListener(new View.OnClickListener() {//button 클릭 이벤트리스너
+            @Override
+            public void onClick(View v) {//클릭시 행동
+                Intent intent = new Intent(MainActivity.this,DegreeActivity.class);
+                startActivity(intent);
+            }
+        });
+        b4.setOnClickListener(new View.OnClickListener() {//button 클릭 이벤트리스너
+            @Override
+            public void onClick(View v) {//클릭시 행동
+                Intent intent = new Intent(MainActivity.this,RestoActivity.class);
+                startActivity(intent);
+            }
+        });
+        b5.setOnClickListener(new View.OnClickListener() {//button 클릭 이벤트리스너
+            @Override
+            public void onClick(View v) {//클릭시 행동
+                Intent intent = new Intent(MainActivity.this,CalActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
