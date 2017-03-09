@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.jisung.myapplication.DegreeActivity">
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text="섭씨온도를 입력하세요" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:hint="온도를 입력하세요" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text="화씨계산" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_height="20dp"
+        android:layout_weight="0.24"
+        android:text="화씨온드를 입력하세요" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="온도를 입력하세요"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:text="섭씨계산" />
+</LinearLayout>

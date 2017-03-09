@@ -16,6 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".appleCalActivity" />
+        <activity android:name=".AgeActivity" />
+        <activity android:name=".DegreeActivity" />
+        <activity android:name=".RestoActivity" />
+        <activity android:name=".CalActivity"></activity>
     </application>
 
 </manifest>
