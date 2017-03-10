@@ -14,6 +14,7 @@ public class DegreeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_degree);
+        setTitle("온도변환기");
 
         e1 = (EditText)findViewById(R.id.e1);
         e2 = (EditText)findViewById(R.id.e2);
@@ -23,21 +24,26 @@ public class DegreeActivity extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String subsi = e1.getText().toString();
-
-                double result = Integer.parseInt(subsi)*1.8+32;
-                Toast.makeText(getApplicationContext(),"화씨 온도는"+result+"입니다.",Toast.LENGTH_SHORT).show();
+                if(e1.getText().toString().equals(""))
+                    Toast.makeText(getApplicationContext(),"입력하세요.",Toast.LENGTH_SHORT).show();
+                else {
+                    String subsi = e1.getText().toString();
+                    double result = Integer.parseInt(subsi) * 1.8 + 32;
+                    Toast.makeText(getApplicationContext(), "화씨 온도는" + result + "입니다.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String whasi = e1.getText().toString();
-
-                double result = (Integer.parseInt(whasi)-32)/1.8;
-                Toast.makeText(getApplicationContext(),"섭씨 온도는"+result+"입니다.",Toast.LENGTH_SHORT).show();
-
+                String whasi = e2.getText().toString();
+                if(e2.getText().toString().equals(""))
+                    Toast.makeText(getApplicationContext(),"입력하세요.",Toast.LENGTH_SHORT).show();
+                else {
+                    double result = (Integer.parseInt(whasi) - 32) / 1.8;
+                    Toast.makeText(getApplicationContext(), "섭씨 온도는" + result + "입니다.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

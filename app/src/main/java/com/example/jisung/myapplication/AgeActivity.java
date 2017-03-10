@@ -14,6 +14,7 @@ public class AgeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_age);
+        setTitle("나이 계산기");
 
         e1 = (EditText)findViewById(R.id.e1);
         e2 = (EditText)findViewById(R.id.e2);
@@ -24,19 +25,26 @@ public class AgeActivity extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String year = e1.getText().toString();
-                int result = 2018-Integer.parseInt(year);
-                Toast.makeText(getApplicationContext(),"당신의 나이는"+result+"입니다.",Toast.LENGTH_SHORT).show();
+                if(e1.getText().toString().equals(""))
+                    Toast.makeText(getApplicationContext(),"입력하세요.",Toast.LENGTH_SHORT).show();
+                else {
+                    String year = e1.getText().toString();
+                    int result = 2018 - Integer.parseInt(year);
+                    Toast.makeText(getApplicationContext(), "당신의 나이는" + result + "입니다.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String age = e2.getText().toString();
-                int result = 2018-Integer.parseInt(age);
-                Toast.makeText(getApplicationContext(),"당신의 태어난연도는"+result+"입니다.",Toast.LENGTH_SHORT).show();
-
+                if(e1.getText().toString().equals(""))
+                    Toast.makeText(getApplicationContext(),"입력하세요.",Toast.LENGTH_SHORT).show();
+                else {
+                    String age = e2.getText().toString();
+                    int result = 2018 - Integer.parseInt(age);
+                    Toast.makeText(getApplicationContext(), "당신의 태어난연도는" + result + "입니다.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
